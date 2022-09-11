@@ -53,9 +53,10 @@ sleepTimes = {
     '80': 300
 }
 
-sleepTime = sleepTimes['0']
+
 
 while True:
+    speed = '0'
 
     data[0] = 0x00
 
@@ -65,5 +66,5 @@ while True:
     print("Packet Sent!")
     led.value = True
     lora.frame_counter += 1
-    time.sleep(10)
+    time.sleep(sleepTimes[speed])
     led.value = False
